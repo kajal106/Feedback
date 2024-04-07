@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="kajal_feedback" resource="default" engine="innodb" comment="Review Table">
+        <column xsi:type="int" name="id" padding="10" unsigned="true" nullable="false" identity="true" comment="ID"/>
+        <column xsi:type="varchar" name="product_id" nullable="false" length="255" comment="Product ID"/>
+        <column xsi:type="varchar" name="full_name" nullable="false" length="255" comment="Full Name"/>
+        <column xsi:type="varchar" name="email" nullable="false" length="255" comment="Email"/>
+        <column xsi:type="varchar" name="contact_no" nullable="false" length="20" comment="Contact No"/>
+        <column xsi:type="text" name="feedback" nullable="false" comment="Feedback"/>
+
+        <!-- Define primary key -->
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="id"/>
+        </constraint>
+    </table>
+</schema>

@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Kajal_Feedback::Feedback"
+             title="Feedback"
+             translate="title"
+             module="Kajal_Feedback"
+             sortOrder="14"
+             resource="Kajal_Feedback::Feedback"
+        />
+
+        <add id="Kajal_Feedback::review"
+             title="Customer's Review"
+             translate="title"
+             module="Kajal_Feedback"
+             sortOrder="2"
+             parent="Kajal_Feedback::Feedback"
+             resource="Kajal_Feedback::review"
+        />
+        <add id="Kajal_Feedback::customer_feedback"
+             title="Feedbacks"
+             translate="title"
+             module="Kajal_Feedback"
+             sortOrder="1"
+             parent="Kajal_Feedback::review"
+             action="feedback/index/index"
+             resource="Kajal_Feedback::customer_feedback"
+        />
+        <add id="Kajal_Feedback::configuration"
+             title="Configuration"
+             translate="title"
+             module="Kajal_Feedback"
+             sortOrder="1"
+             parent="Kajal_Feedback::review"
+             action="adminhtml/system_config/edit/section/feedback_configuration"
+             resource="Kajal_Feedback::configuration"
+        />
+    </menu>
+</config>

@@ -1,0 +1,43 @@
+<!-- app/code/YourCompany/YourModule/view/frontend/templates/form.phtml -->
+<form id="custom-form" method="post" action="<?= $block->getUrl('feedback/feedback/submit') ?>" enctype="multipart/form-data">
+    <div class="field">
+        <label for="product" class="label"><span><?= __('Product') ?></span></label>
+        <div class="control">
+            <select id="product_id" name="product_id" class="select" required>
+                <option value=""><?= __('Please select a product') ?></option>
+                <?php foreach ($block->getProducts() as $product): ?>
+                    <option value="<?= $product['value'] ?>"><?= $product['label'] ?></option>
+                <?php endforeach; ?>
+            </select>
+        </div>
+    </div>
+    <div class="field">
+        <label for="fullname" class="label"><span><?= __('Full Name') ?></span></label>
+        <div class="control">
+            <input id="full_name" name="full_name" type="text" class="input-text" required>
+        </div>
+    </div>
+    <div class="field">
+        <label for="email" class="label"><span><?= __('Email') ?></span></label>
+        <div class="control">
+            <input id="email" name="email" type="email" class="input-text" required>
+        </div>
+    </div>
+    <div class="field">
+        <label for="contact_no" class="label"><span><?= __('Contact No') ?></span></label>
+        <div class="control">
+            <input id="contact_no" name="contact_no" type="text" class="input-text">
+        </div>
+    </div>
+    <div class="field">
+        <label for="feedback" class="label"><span><?= __('Feedback') ?></span></label>
+        <div class="control">
+            <textarea id="feedback" name="feedback" class="input-text" required></textarea>
+        </div>
+    </div>
+    <div class="actions-toolbar">
+        <div class="primary">
+            <button type="submit" class="action submit primary"><span><?= __('Send') ?></span></button>
+        </div>
+    </div>
+</form>

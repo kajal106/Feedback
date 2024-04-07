@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Ced_Spartoo:etc/system_file.xsd">
+    <system>
+        <tab id="feedback" translate="label" sortOrder="1">
+            <label>Feedback</label>
+        </tab>
+        <section id="feedback_configuration" translate="label" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Feedback Configuration</label>
+            <tab>feedback</tab>
+            <resource>Ced_Spartoo::system_config</resource>
+            <group id="feedback_email" translate="label" type="text" sortOrder="60" showInDefault="1" showInWebsite="1"
+                   showInStore="1"
+            >
+                <label>Feedback Email Settings</label>
+                <field id="feedback_notify_email" translate="label comment" type="text" sortOrder="2" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Receiver Notification Email</label>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
