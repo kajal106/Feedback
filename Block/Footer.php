@@ -17,10 +17,14 @@ class Footer extends \Magento\Framework\View\Element\Html\Link
         parent::__construct($context, $data);
         $this->urlBuilder = $urlBuilder;
     }
+    
+    
     public function getHref()
     {
         return $this->urlBuilder->getUrl('feedback/feedback/index');
     }
+    
+    
     public function getLabel()
     {
         return __('Feedback');
